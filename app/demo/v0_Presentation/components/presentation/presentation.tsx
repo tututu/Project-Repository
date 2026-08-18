@@ -96,7 +96,7 @@ const slides: SlideDefinition[] = [
   {
     id: 'summary',
     section: '结语',
-    label: '总结与 Q&A',
+    label: '总结',
     title: '是什么、能干什么、解决什么、对团队有什么用',
     icon: Flag,
     component: SummarySlide,
