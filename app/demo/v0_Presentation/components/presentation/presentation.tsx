@@ -40,7 +40,7 @@ const slides: SlideDefinition[] = [
   {
     id: 'history',
     section: '01 · 起源',
-    label: '历史与由来',
+    label: '历史',
     title: 'v0 从单组件生成到全栈应用平台的演进历程',
     icon: History,
     component: HistorySlide,

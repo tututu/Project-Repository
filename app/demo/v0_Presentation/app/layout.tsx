@@ -1,11 +1,12 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { Geist, Geist_Mono, Noto_Sans_SC } from 'next/font/google'
+import { Geist, Geist_Mono, Noto_Sans_SC, Space_Grotesk } from 'next/font/google'
 import { TooltipProvider } from '@/components/ui/tooltip'
 import './globals.css'
 
 const _geistSans = Geist({ subsets: ['latin'], variable: '--font-geist-sans' })
 const _geistMono = Geist_Mono({ subsets: ['latin'], variable: '--font-mono' })
+const _spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space-grotesk' })
 const _notoSansSC = Noto_Sans_SC({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
@@ -49,7 +50,7 @@ export default function RootLayout({
   return (
     <html
       lang="zh-CN"
-      className={`dark ${_geistSans.variable} ${_geistMono.variable} ${_notoSansSC.variable}`}
+      className={`dark ${_geistSans.variable} ${_geistMono.variable} ${_spaceGrotesk.variable} ${_notoSansSC.variable}`}
     >
       <body className="bg-background font-sans antialiased">
         <TooltipProvider delay={200}>{children}</TooltipProvider>
