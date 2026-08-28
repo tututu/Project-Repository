@@ -7,6 +7,7 @@
 @theme inline {
   --font-sans: var(--font-geist-sans), var(--font-noto-sans-sc), ui-sans-serif, system-ui,
     sans-serif;
+  --font-space-grotesk: var(--font-space-grotesk), sans-serif;
   --font-mono: var(--font-mono), var(--font-noto-sans-sc), ui-monospace, monospace;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);

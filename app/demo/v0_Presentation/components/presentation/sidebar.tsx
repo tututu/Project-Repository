@@ -76,7 +76,10 @@ export function Sidebar({ slides, current, onSelect, collapsed, onToggleCollapse
                 onClick={() => onSelect(i)}
                 aria-current={isActive}
                 className={cn(
-                  'group relative flex w-full items-center gap-3 rounded-xl px-2.5 py-2.5 text-left transition-colors lg:px-3',
+                  cn(
+                    'group relative flex w-full items-center gap-3 rounded-xl px-2.5 py-2.5 text-left transition-colors lg:px-3',
+                    slide.id === 'history' && 'pb-[63px] pr-0 text-center',
+                  ),
                   isActive ? 'text-foreground' : 'text-muted-foreground hover:text-foreground',
                 )}
               >
@@ -98,8 +101,21 @@ export function Sidebar({ slides, current, onSelect, collapsed, onToggleCollapse
                   <slide.icon className="size-3.5" />
                 </span>
                 <span className="relative z-10 hidden min-w-0 flex-col lg:flex">
-                  <span className="truncate text-[13px] font-medium leading-snug">{slide.label}</span>
-                  <span className="truncate font-mono text-[11px] text-muted-foreground">
+                  <span
+                    className={cn(
+                      'truncate text-[13px] font-medium leading-snug',
+                      slide.id === 'history' &&
+                        'bg-accent text-[#1b67d8] font-space-grotesk text-center text-[30px] font-bold',
+                    )}
+                  >
+                    {slide.label}
+                  </span>
+                  <span
+                    className={cn(
+                      'truncate font-mono text-[11px] text-muted-foreground',
+                      slide.id === 'history' && 'uppercase',
+                    )}
+                  >
                     {slide.section}
                   </span>
                 </span>
