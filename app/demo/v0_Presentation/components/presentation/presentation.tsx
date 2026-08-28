@@ -40,7 +40,7 @@ const slides: SlideDefinition[] = [
   {
     id: 'history',
     section: '01 · 起源',
-    label: '历史与由来',
+    label: '历史',
     title: 'v0 从单组件生成到全栈应用平台的演进历程',
     icon: History,
     component: HistorySlide,
@@ -96,7 +96,7 @@ const slides: SlideDefinition[] = [
   {
     id: 'summary',
     section: '结语',
-    label: '总结与 Q&A',
+    label: '总结',
     title: '是什么、能干什么、解决什么、对团队有什么用',
     icon: Flag,
     component: SummarySlide,
